@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+    <include android:id="@+id/userToolbar"
+        layout="@layout/chat_toolbar"/>
+    <RelativeLayout
+        android:background="@color/trans"
+        android:layout_below="@+id/userToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvUserMsgList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/etUserTypeMsg" />
+    <EditText
+
+        android:textColorHint="@color/white_1000"
+        android:textColor="@color/white_1000"
+        android:id="@+id/etUserTypeMsg"
+        android:paddingLeft="68dp"
+        android:background="@drawable/shape_et_msg"
+        android:textSize="22sp"
+        android:hint="Enter text..."
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/btnUserSendMsg" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:padding="10dp"
+        android:id="@+id/btnUserSendMsg"
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/send_icon_round"
+        android:src="@drawable/ic_msg_send"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+    <ImageView
+        android:onClick="attachment"
+        android:src="@drawable/ic_image_attachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivChatCamera"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignTop="@+id/btnUserSendMsg"
+        android:layout_toStartOf="@+id/btnUserSendMsg" />
+    <ImageView
+        android:onClick="cameraClick"
+        android:src="@drawable/ic_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivChatAttach"
+        android:layout_marginStart="18dp"
+        android:layout_alignTop="@+id/ivChatCamera"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
+</RelativeLayout>

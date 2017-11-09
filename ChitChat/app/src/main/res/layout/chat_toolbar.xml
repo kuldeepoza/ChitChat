@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:titleTextColor="@android:color/white"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/ivChatBack"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_left_arrow"
+            android:layout_height="28dp" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cimChat"
+            android:layout_gravity="center"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_user"/>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tvChatName"
+            android:layout_weight="6"
+            android:textColor="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:text="ChitChat"/>
+        <ImageView
+            android:id="@+id/ivChatCall"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_call"
+            android:layout_height="28dp" />
+        <ImageView
+            android:id="@+id/ivChatUser"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_action_name"
+            android:layout_height="45dp" />
+        <ImageView
+            android:src="@drawable/ic_down_arrow"
+            android:id="@+id/popupImage"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</android.widget.Toolbar>

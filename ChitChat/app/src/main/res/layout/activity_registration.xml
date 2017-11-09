@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/LinLayVertical"
+        android:gravity="center">
+        <TextView
+            style="@style/RegTv"
+            android:text="Registration"
+            android:fontFamily="sans-serif-smallcaps"
+            android:id="@+id/regTvHeader"
+            android:background="@drawable/reg_back_layout"
+            />
+        <android.support.v4.widget.NestedScrollView android:layout_gravity="start"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/reg_back_layout"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                style="@style/LinLayVertical"
+                android:padding="30dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:onClick="civUserProfileClick"
+                    android:id="@+id/regUserProfile"
+                    android:layout_gravity="center"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/my_photo"/>
+                <EditText
+                    android:drawableLeft="@drawable/ic_name"
+                    android:id="@+id/regEtName"
+                    android:hint="Name"
+                    android:inputType="text"
+                    style="@style/RegEt"
+                    android:drawablePadding="20dp"
+                    android:background="@drawable/reg_et_round"
+                    />
+                <EditText
+                    style="@style/RegEt"
+                    android:drawablePadding="20dp"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/reg_et_round"
+                    android:id="@+id/regEtEmail"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+                <EditText
+                    style="@style/RegEt"
+                    android:drawablePadding="20dp"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:background="@drawable/reg_et_round"
+                    android:id="@+id/regEtPass"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+                <EditText
+                    style="@style/RegEt"
+                    android:drawablePadding="20dp"
+                    android:drawableLeft="@drawable/ic_mobile_no"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/regEtMobNo"
+                    android:background="@drawable/reg_et_round"
+                    android:hint="Mobile No"
+                    android:inputType="number"
+                    />
+                <Button
+                    android:id="@+id/regBtnSubmit"
+                    style="@style/RegBtn"
+                />
+                <TextView
+                    android:onClick="tvLogRedirect"
+                    android:layout_marginTop="15dp"
+                    android:text="User already registered..."
+                    android:layout_width="match_parent"
+                    android:textSize="22sp"
+                    android:textColor="@color/blue_200"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/regRedirect"
+                    />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</FrameLayout>

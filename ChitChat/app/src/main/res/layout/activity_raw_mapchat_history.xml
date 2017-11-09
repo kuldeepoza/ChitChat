@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center"
+            app:cardCornerRadius="4dp"
+            android:background="@color/blue_600"
+            android:id="@+id/cvChatMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+           >
+           <RelativeLayout
+               android:padding="5dp"
+               android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+             >
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/civChatHis"
+                   android:layout_gravity="center"
+                   android:layout_width="match_parent"
+                   android:layout_height="70dp"
+                   android:src="@drawable/ic_user"
+                   />
+                <TextView
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:layout_below="@+id/civChatHis"
+                    android:id="@+id/tvChatNameHis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_1000"
+                    android:text="kuldeep"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:layout_below="@+id/tvChatNameHis"
+                    android:textColor="@color/grey_900"
+                    android:id="@+id/tvChatTimeHis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12:1"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>

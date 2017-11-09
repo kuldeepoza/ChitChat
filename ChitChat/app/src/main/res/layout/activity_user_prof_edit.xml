@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_1000">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarUserProfEdit"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="parallax"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp">
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/ivUserProfEditBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left_arrow" />
+
+            <TextView
+                android:layout_weight="5"
+                android:id="@+id/tvUserProfEditName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivUserProfEditBack"
+                android:layout_marginStart="18dp"
+                android:layout_toEndOf="@+id/ivUserProfEditBack"
+                android:text="Kuldeep"
+                android:textColor="@color/white_1000"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/ivUserProfEditIco"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_edittext" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <ImageView
+        android:id="@+id/ivUserProfEdit"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/ic_user"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

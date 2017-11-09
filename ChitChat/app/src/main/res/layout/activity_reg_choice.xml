@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/LinLayVertical"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/background"
+        android:gravity="center">
+            <LinearLayout
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="15dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/reg_back_layout"
+                style="@style/LinLayVertical"
+              >
+                <ImageView
+                    android:src="@mipmap/app_icon"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" />
+                <TextView
+                    android:padding="10dp"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/white_1000"
+                    android:textSize="18sp"
+                    android:text="@string/starting_app_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:drawableLeft="@drawable/ic_user"
+                    android:id="@+id/userStartButton"
+                    android:text="Get Start"
+                    android:onClick="btnGetStart"
+                    style="@style/RegBtn" />
+            </LinearLayout>
+    </LinearLayout>

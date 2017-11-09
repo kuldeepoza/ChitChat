@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+   <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true"
+        >
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collspacing"
+            android:pointerIcon="top_right_diagonal_double_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <ImageView
+                android:id="@+id/ivUserDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_user"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                app:layout_collapseMode="pin" />
+            <android.support.v7.widget.Toolbar
+                android:subtitleTextColor="@color/white_1000"
+                android:id="@+id/toolbar"
+                app:title="Kuldeep Oza"
+                android:navigationIcon="@color/white_1000"
+                android:collapseIcon="@color/white_1000"
+                android:titleTextColor="@color/white_1000"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="parallax"
+                app:theme="@style/ThemeOverlay.AppCompat">
+                <ImageView
+                    android:id="@+id/ivUserProfBack"
+                    android:layout_gravity="left"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_left_arrow"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:drawableRight="@drawable/ic_name"
+                        android:id="@+id/tvUserDeatilName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:visibility="visible"
+                        android:text="Kuldeep Oza"
+                        android:textSize="19dp" />
+                    <LinearLayout
+                        android:id="@+id/llEditUserName"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <EditText
+                        android:background="@android:color/transparent"
+                        android:layout_weight="7"
+                        android:drawableLeft="@drawable/ic_name"
+                        android:drawablePadding="30dp"
+                        android:id="@+id/etUserEditName"
+                        android:hint="Name"
+                        android:padding="15dp"
+                        android:paddingLeft="20dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <Button
+                        android:id="@+id/btnUSerEditName"
+                        android:layout_weight="3"
+                        android:text="Submit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:drawableRight="@drawable/ic_name"
+                        android:padding="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="visible"
+                        android:id="@+id/tvUserDetailEmail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ozakuldeep14@gmail.com"
+                        android:textSize="18dp" />
+                    <LinearLayout
+
+                        android:id="@+id/llEditUserEmail"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:layout_weight="7"
+                            android:background="@android:color/transparent"
+                            android:drawableLeft="@drawable/ic_email"
+                            android:drawablePadding="30dp"
+                            android:id="@+id/etUserEditEmail"
+                            android:hint="Email"
+                            android:padding="15dp"
+                            android:paddingLeft="20dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <Button
+                            android:layout_weight="3"
+                            android:id="@+id/btnUSerEditEmail"
+                            android:text="Submit"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:drawableRight="@drawable/ic_name"
+                        android:padding="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/tvUserDetailMo"
+                        android:visibility="visible"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="8401156681"
+                        android:textSize="18dp" />
+                    <LinearLayout
+                        android:id="@+id/llEditUserMobile"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:layout_weight="7"
+                            android:background="@android:color/transparent"
+                            android:drawableLeft="@drawable/ic_mobile_no"
+                            android:drawablePadding="30dp"
+                            android:id="@+id/etUserEditMobile"
+                            android:hint="Mobile No"
+                            android:padding="15dp"
+                            android:paddingLeft="20dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                        <Button
+
+                            android:id="@+id/btnUserEditMob"
+                            android:layout_weight="3"
+                            android:text="Submit"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

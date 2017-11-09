@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinLayVertical"
+    android:gravity="center">
+    <TextView
+        style="@style/RegTv"
+        android:text="Login"
+        android:fontFamily="sans-serif-smallcaps"
+        android:id="@+id/regTvHeader"
+        android:background="@drawable/reg_back_layout"
+        />
+    <android.support.v4.widget.NestedScrollView android:layout_gravity="start"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/reg_back_layout"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            style="@style/LinLayVertical"
+            android:padding="30dp">
+            <EditText
+                style="@style/RegEt"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@drawable/ic_email"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/reg_et_round"
+                android:id="@+id/loginEtEmail"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+            <EditText
+                style="@style/RegEt"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@drawable/ic_password"
+                android:background="@drawable/reg_et_round"
+                android:id="@+id/loginEtPass"
+                android:hint="Password"
+                android:inputType="textPassword" />
+          <TextView
+              android:id="@+id/tvForgPass"
+              android:layout_width="match_parent"
+              android:padding="8dp"
+              android:text="Forgot Password"
+              android:textColor="@color/blue_50"
+              android:textSize="20sp"
+              android:gravity="right"
+              android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/loginBtnSubmit"
+                android:layout_height="60dp"
+                style="@style/RegBtn" />
+            <Button
+                android:drawablePadding="-20dp"
+                android:drawableLeft="@drawable/ic_user"
+                android:id="@+id/loginRedirect"
+                android:text="New user"
+                android:onClick="tvRegRedirect"
+                android:layout_height="60dp"
+                style="@style/RegBtn" />
+          <!--  <Button
+                android:drawablePadding="-20dp"
+                android:drawableLeft="@drawable/ic_user"
+                android:id="@+id/btnOtherOption"
+                android:text="Other Option"
+                android:onClick="btnOtherSubmit"
+                android:layout_height="60dp"
+                style="@style/RegBtn" />-->
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+</FrameLayout>

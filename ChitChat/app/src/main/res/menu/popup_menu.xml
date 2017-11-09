@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/popupMenuWallpaper"
+        android:orderInCategory="0"
+        android:title="Wallpaper"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/popupMenuClear"
+        android:orderInCategory="0"
+        android:title="Clear Chat"
+        android:showAsAction="never"
+        />
+</menu>

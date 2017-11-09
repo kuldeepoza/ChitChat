@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chitchat">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <permission
+        android:name="com.example.chitchat.permission.MAP_RECEIVE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="com.example.chitchat.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.chitchat.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.example.chitchat.permission.MAP_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature
+        android:glEsVersion="0x0020000"
+        android:required="true" />
+
+    <application
+        android:name=".FirebaseMainApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.UsersActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.RegistrationChoiceActivity"
+            android:theme="@style/NoStatusBar" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/NoStatusBar" />
+        <activity
+            android:name=".activities.ChatActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.RegistrationActivity"
+            android:theme="@style/NoStatusBar" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/NoStatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.UserProfEditActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.UserProfile"
+            android:theme="@style/UserProfile" />
+        <activity
+            android:name=".activities.ForgetPasswordActivity"
+            android:theme="@style/NoStatusBar" />
+
+        <service android:name=".receiver.FCMPushReceiverService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".receiver.FCMTokenRefreshListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/map_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".activities.MapChatActivity"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".activities.OtherSignInActivity"
+            android:theme="@style/NoStatusBar" />
+        <activity android:name=".activities.UserMobileNo" />
+        <activity
+            android:theme="@style/UserProfile"
+            android:name=".activities.OtherUserProfile"
+            ></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/LinLayVertical"
+        android:gravity="center">
+        <TextView
+            style="@style/RegTv"
+            android:text="Login"
+            android:fontFamily="sans-serif-smallcaps"
+            android:id="@+id/regTvHeader"
+            android:background="@drawable/reg_back_layout"
+            />
+        <android.support.v4.widget.NestedScrollView android:layout_gravity="start"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/reg_back_layout"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                style="@style/LinLayVertical"
+                android:padding="30dp">
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleSignInBtn"
+        android:text="Google"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        />
+     <com.facebook.login.widget.LoginButton
+         android:layout_marginTop="20dp"
+          android:drawableLeft="@mipmap/ic_facebook"
+          android:id="@+id/fbSignInBtn"
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+           />
+</LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        </LinearLayout></FrameLayout>
